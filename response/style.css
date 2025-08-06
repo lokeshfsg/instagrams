@@ -5,12 +5,20 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+
+    
 }
 body{
 background-color: #242424;
 letter-spacing: 0.5px;
 color: #fff;
+
+@media (max-width:600px)  {
+    .main-home{
+        height: 100vh;
+    }
 }
+
 ::-webkit-scrollbar{
     width: 3px;
 }
@@ -128,7 +136,7 @@ background: #e2336b;
     top: 0;
     min-height: 100vh;
     border-radius: 1rem 0 0 1rem;
-    overflow: hidden;
+    overflow-y: auto;
 }
 .header{
     display: flex;
@@ -322,4 +330,73 @@ margin-left: 1rem;
 .change {
     color: rgb(228, 47, 77); /* Or any color you want */
 }
+html {
+    font-size: 100%;
+}
 
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 85%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .main-home {
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .stories {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .stories-img {
+        width: 60px;
+    }
+
+    .stories-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-box {
+        width: 100%;
+    }
+}
